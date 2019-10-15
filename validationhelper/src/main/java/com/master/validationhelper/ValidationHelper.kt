@@ -9,7 +9,11 @@ import com.google.android.material.textfield.TextInputLayout
 import java.util.regex.Pattern
 
 
-class ValidationHelper(private var anim: Animation? = null, context: Context) {
+class ValidationHelper(
+    private var anim: Animation? = null,
+    context: Context,
+    val putStarInRequired: Boolean = false
+) {
 
     init {
         if (anim == null) {
@@ -23,10 +27,6 @@ class ValidationHelper(private var anim: Animation? = null, context: Context) {
     private val validationList: ArrayList<ValidationModel> = ArrayList()
 
 
-    var putStarInRequired: Boolean = false
-        set(value) {
-            field = value
-        }
 
     /**
      * Simple field required Validation

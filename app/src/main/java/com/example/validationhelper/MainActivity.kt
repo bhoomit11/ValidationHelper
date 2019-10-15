@@ -24,17 +24,15 @@ class MainActivity : AppCompatActivity() {
 
     private val validationHelper: ValidationHelper by lazy {
         ValidationHelper(
-            anim = null, //Pass custom animation if you need, if not pass null, shake anim is default
-            context = this
+            context = this,
+            anim = null, // Pass custom animation if you need, if not then pass null, shake anim is default
+            putStarInRequired = true // Set this as true if * needed in required fields in you project
         )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Set this as true if * needed in required fields in you project
-        validationHelper.putStarInRequired = true
 
         // call add validation after init UI
         addValidation()
