@@ -82,6 +82,15 @@ class MainActivity : AppCompatActivity() {
             mobileNumberPattern = MOBILE_PATTERN // add your pattern if you need, but default is available
         )
 
+
+        /*
+         * Simple required field validation
+         */
+        validationHelper.addRequiredValidation(
+            textInputLayout = tilBankAccountNumber,
+            blankMsg = "Enter bank account number" // Error message if blank
+        )
+
         /*
          * Custom field validation (Add you own pattern validation)
          */
