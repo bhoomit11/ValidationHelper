@@ -96,6 +96,21 @@ You can add different validation like this in validationHelper
             confirmTextInputLayout = tilConfirmPassword, // Add this param as your confirm password field
             mismatchPasswordMsg = "Password and confirm password must be same" // Error message if not matched
         )
+	
+	/*
+         * your own custom logic validation
+         */
+	validatorHelper.addCustomLogicValidation(object : CustomLogicValidation {
+            override fun isValid(): Boolean {
+                return if (checkbox.isChecked) {
+                    true
+                } else {
+		    // Here you can show your error msg for custom logic
+                    showSnackbar(getString(R.string.msg_enter_enter_time_for_x, itemNotFilled.getFullWeekName()))
+                    false
+                }
+            }
+        })
 
 to clear out all validation added in validationHelper class
     
