@@ -110,7 +110,7 @@ You can add different validation like this in validationHelper
                     false
                 }
             }
-    	})
+        })
 
 to clear out all validation added in validationHelper class
     
