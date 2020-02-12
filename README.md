@@ -48,7 +48,6 @@ You can add different validation like this in validationHelper
         /*
          * Email field validation
          */
-	 3+
         validationHelper.addEmailValidation(
             textInputLayout = tilEmail,
             blankEmailMsg = "Enter email address", // Error message if blank
