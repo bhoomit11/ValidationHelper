@@ -14,8 +14,8 @@ Step 1. Add the dependency
 Step 2. Add it in your root build.gradle at the end of repositories:
 
     dependencies {
-	        implementation 'com.github.bhoomit11:ValidationHelper:1.0.0'
-	}
+	implementation 'com.github.bhoomit11:ValidationHelper:1.0.0'
+    }
   
   
 Create object of validation helper in class which you want to use validations
@@ -33,7 +33,7 @@ Create object of validation helper in class which you want to use validations
 
 You can add different validation like this in validationHelper
 
-     /*
+        /*
          * Simple required field validation
          */
         validationHelper.addRequiredValidation(
