@@ -97,11 +97,11 @@ You can add different validation like this in validationHelper
             mismatchPasswordMsg = "Password and confirm password must be same" // Error message if not matched
         )
 	
-	/*
+    	/*
          * your own custom logic validation
          */
 	 
-	 validatorHelper.addCustomLogicValidation(object : CustomLogicValidation {
+    	validatorHelper.addCustomLogicValidation(object : CustomLogicValidation {
             override fun isValid(): Boolean {
                 return if (checkbox.isChecked) {
                     true
@@ -111,7 +111,7 @@ You can add different validation like this in validationHelper
                     false
                 }
             }
-	 })
+    	})
 
 to clear out all validation added in validationHelper class
     
