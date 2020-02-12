@@ -1,4 +1,8 @@
-# ValidationHelper
+
+
+![alt text](https://raw.githubusercontent.com/bhoomit11/ValidationHelper/master/logo/validation_helper_logo.png)
+
+
 Library to define all validation condition at single place and handle all validation in a class in simple way
 Follow below step to add this in to your project
 
@@ -44,6 +48,7 @@ You can add different validation like this in validationHelper
         /*
          * Email field validation
          */
+	 3+
         validationHelper.addEmailValidation(
             textInputLayout = tilEmail,
             blankEmailMsg = "Enter email address", // Error message if blank
