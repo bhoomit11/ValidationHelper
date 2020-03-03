@@ -1,5 +1,6 @@
 package com.master.validationhelper
 
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.util.Log
 import android.view.animation.Animation
@@ -11,7 +12,7 @@ import java.util.regex.Pattern
 
 class ValidationHelper(
     private var anim: Animation? = null,
-    context: Context,
+    val context: Context,
     val putStarInRequired: Boolean = false
 ) {
 
@@ -21,12 +22,8 @@ class ValidationHelper(
         }
     }
 
-    private val TAG = "ValidationHelper"
-
     private val validator by lazy { Validator(anim) }
     private val validationList: ArrayList<ValidationModel> = ArrayList()
-
-
 
     /**
      * Simple field required Validation
@@ -79,6 +76,7 @@ class ValidationHelper(
             )
             if (putStarInRequired && !textInputLayout.hint.toString().trim().endsWith("*"))
                 textInputLayout.hint = textInputLayout.hint.toString() + "*"
+
         }
         validationList.add(
             ValidationModel(
@@ -176,11 +174,8 @@ class ValidationHelper(
      * Strong and required password check
      */
     fun addPasswordValidation(
-        textInputLayout: TextInputLayout,
-        blankPasswordMsg: String,
-        weakPasswordMSg: String = "",
-        isRequired: Boolean = true,
-        isStrong: Boolean = false,
+        textInputLayout: TextInputLayout, blankPasswordMsg: String, weakPasswordMSg: String = "",
+        isRequired: Boolean = true, isStrong: Boolean = false,
         strongPattern: Pattern = STRONG_PASSWORD_CHECK
     ) {
         validator.errorRemoveOnChange(textInputLayout)
@@ -338,7 +333,7 @@ class ValidationHelper(
                 }
             }
         } else {
-            Log.e(TAG, "You don't have any validations added in your validation list")
+            Log.e("ValidationHelper",context.getString(R.string.msg_no_validation))
             return true
         }
         return true
