@@ -136,7 +136,7 @@ class ValidationHelper(
             ValidationModel(
                 mTextInputLayout = textInputLayout,
                 mErrMsg = invalidMobileNumberMsg,
-                mPattern = MOBILE,
+                mPattern = mobileNumberPattern,
                 mIsRequired = isRequired
             )
         )
