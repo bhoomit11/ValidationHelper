@@ -1,6 +1,5 @@
 package com.master.validationhelper
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.util.Log
 import android.view.animation.Animation
