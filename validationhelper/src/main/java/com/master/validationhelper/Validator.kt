@@ -90,7 +90,7 @@ class Validator(private val anim: Animation?) {
      * Confirm password validator for edit text
      */
     fun validateEditTextConfirmPassword(model: ValidationModel): Boolean {
-        if (model.mEditText?.text.toString() == model.mConfirmationEditText?.text.toString()) {
+        if (model.mEditText?.text.toString().isNotBlank() && model.mEditText?.text.toString() != model.mConfirmationEditText?.text.toString()) {
             model.mConfirmationEditText?.error = model.mErrMsg
             model.mConfirmationEditText?.startAnimation(anim)
             model.mConfirmationEditText?.requestFocusAndKeyboard()
