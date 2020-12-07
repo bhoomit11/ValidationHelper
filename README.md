@@ -18,7 +18,7 @@ Step 1. Add the dependency
 Step 2. Add it in your root build.gradle at the end of repositories:
 
     dependencies {
-    	implementation 'com.github.bhoomit11:ValidationHelper:1.0.2'
+    	implementation 'com.github.bhoomit11:ValidationHelper:1.0.4'
     }
   
   
