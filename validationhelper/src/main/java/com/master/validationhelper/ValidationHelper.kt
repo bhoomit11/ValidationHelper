@@ -319,7 +319,7 @@ class ValidationHelper(
 
                 } else if (it.mEditText != null && it.mTextInputLayout == null) {
                     if (it.mPattern == null) {
-                        if (it.mConfirmationTextInputLayout != null) {
+                        if (it.mConfirmationEditText != null) {
                             if (!validator.validateEditTextConfirmPassword(it)) return false
                         } else {
                             if (!validator.validateEditTextRequired(it)) return false

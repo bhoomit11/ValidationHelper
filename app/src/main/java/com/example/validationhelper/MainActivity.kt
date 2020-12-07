@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             if (validationHelper.validateAll()) {
                 // Put you logic here if all validations are passed
+
+
             }
         }
     }
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         validationHelper.clearAll() // If you want to clear all previous validations added
 
-        /*
+        /**
          * Simple required field validation
          */
         validationHelper.addRequiredValidation(
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             blankMsg = "Enter full name" // Error message if blank
         )
 
-        /*
+        /**
          * Email field validation
          */
         validationHelper.addEmailValidation(
@@ -69,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             isRequired = true
         )
 
-        /*
+        /**
          * Mobile field validation
          */
         validationHelper.addMobileValidation(
@@ -81,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-        /*
+        /**
          * Simple required field validation
          */
         validationHelper.addRequiredValidation(
@@ -89,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             blankMsg = "Enter bank account number" // Error message if blank
         )
 
-        /*
+        /**
          * Custom field validation (Add you own pattern validation)
          */
         validationHelper.addCustomePatternValidation(
@@ -98,7 +100,7 @@ class MainActivity : AppCompatActivity() {
             pattern = ACCOUNT_NUMBER_PATTERN
         )
 
-        /*
+        /**
          * Password field validation, with strong password enable option
          */
         validationHelper.addPasswordValidation(
@@ -110,7 +112,7 @@ class MainActivity : AppCompatActivity() {
             strongPattern = STRONG_PASSWORD_PATTERN // add your pattern if you need, but default is available
         )
 
-        /*
+        /**
          * confirm password field validation
          */
         validationHelper.addConfirmPasswordValidation(
